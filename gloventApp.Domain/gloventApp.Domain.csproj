@@ -56,9 +56,7 @@
     <Compile Include="Entities\complaint.cs" />
     <Compile Include="Entities\evente.cs" />
     <Compile Include="Entities\field.cs" />
-    <Compile Include="Entities\hous.cs" />
     <Compile Include="Entities\organization.cs" />
-    <Compile Include="Entities\OussemaTest.cs" />
     <Compile Include="Entities\poll.cs" />
     <Compile Include="Entities\question.cs" />
     <Compile Include="Entities\registrationform.cs" />

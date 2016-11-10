@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201611091110169_h.Designer.cs">
       <DependentUpon>201611091110169_h.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611101803019_houssemDelete.cs" />
+    <Compile Include="Migrations\201611101803019_houssemDelete.Designer.cs">
+      <DependentUpon>201611101803019_houssemDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\gloventdbContext.cs" />
     <Compile Include="Models\Mapping\answerMap.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611091110169_h.resx">
       <DependentUpon>201611091110169_h.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611101803019_houssemDelete.resx">
+      <DependentUpon>201611101803019_houssemDelete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

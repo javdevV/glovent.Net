@@ -1,7 +1,5 @@
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using gloventApp.Data.Models.Mapping;
-using gloventApp.Domain.Entities;
 
 namespace gloventApp.Data.Models
 {
@@ -33,8 +31,7 @@ namespace gloventApp.Data.Models
         public DbSet<task> task { get; set; }
         public DbSet<ticket> ticket { get; set; }
         public DbSet<user> users { get; set; }
-        public DbSet<hous> houses { get; set; }
-
+ 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new answerMap());
