@@ -1,0 +1,10 @@
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\obj\Debug\gloventApp.Domain.csprojResolveAssemblyReference.cache
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\gloventApp.Domain.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\gloventApp.Domain.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\obj\Debug\gloventApp.Domain.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\obj\Debug\gloventApp.Domain.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\gloventApp.Domain.dll.config
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\EntityFramework.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\EntityFramework.xml
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Domain\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,12 @@
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\gloventApp.exe.config
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\gloventApp.exe
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\gloventApp.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\obj\Debug\gloventApp.csprojResolveAssemblyReference.cache
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\obj\Debug\gloventApp.exe
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\obj\Debug\gloventApp.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\EntityFramework.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\EntityFramework.xml
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\MySql.Data.Entity.EF6.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp\bin\Debug\MySql.Data.dll

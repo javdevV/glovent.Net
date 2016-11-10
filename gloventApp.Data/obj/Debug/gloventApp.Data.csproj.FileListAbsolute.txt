@@ -1,0 +1,17 @@
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\obj\Debug\gloventApp.Data.csprojResolveAssemblyReference.cache
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\gloventApp.Data.dll.config
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\gloventApp.Data.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\gloventApp.Data.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\EntityFramework.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\gloventApp.Domain.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\gloventApp.Domain.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\EntityFramework.xml
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\obj\Debug\gloventApp.Data.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\obj\Debug\gloventApp.Data.pdb
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\bin\Debug\MySql.Data.dll
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.InitialSchema.resources
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\obj\Debug\gloventApp.Data.csproj.GenerateResource.Cache
+c:\users\oussema\documents\visual studio 2015\Projects\glovent\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.h.resources
