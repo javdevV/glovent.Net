@@ -18,3 +18,13 @@ C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domai
 C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\obj\Debug\gloventApp.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\obj\Debug\gloventApp.Domain.dll
 C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\obj\Debug\gloventApp.Domain.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\gloventApp.Domain.dll.config
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\gloventApp.Domain.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\gloventApp.Domain.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\obj\Debug\gloventApp.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\obj\Debug\gloventApp.Domain.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Domain\obj\Debug\gloventApp.Domain.pdb

@@ -11,3 +11,16 @@ C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Servi
 C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.Domain.pdb
 C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\obj\Debug\gloventApp.ServicePattern.dll
 C:\Users\Hoss\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\obj\Debug\gloventApp.ServicePattern.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.ServicePattern.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.ServicePattern.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.Data.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\EntityFramework.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.Domain.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\MySql.Data.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.Data.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\EntityFramework.xml
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\bin\Debug\gloventApp.Domain.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\obj\Debug\gloventApp.ServicePattern.csprojResolveAssemblyReference.cache
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\obj\Debug\gloventApp.ServicePattern.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.ServicePattern\obj\Debug\gloventApp.ServicePattern.pdb

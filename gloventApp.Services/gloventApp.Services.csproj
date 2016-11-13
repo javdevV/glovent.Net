@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>06e7d997-2b78-47a2-8969-bfa25b98e0db</ProjectGuid>
+    <ProjectGuid>{06E7D997-2B78-47A2-8969-BFA25B98E0DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>gloventApp.Services</RootNamespace>
@@ -30,24 +30,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category\CategoryService.cs" />
+    <Compile Include="Category\ICategoryService.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Event\EventService.cs" />
+    <Compile Include="Event\IEventService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gloventApp.Data\gloventApp.Data.csproj">
+      <Project>{962f3d73-75a6-422c-b12a-659e3319dae8}</Project>
+      <Name>gloventApp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gloventApp.Domain\gloventApp.Domain.csproj">
+      <Project>{eabf4f89-3688-4185-9fca-f3390eca139b}</Project>
+      <Name>gloventApp.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gloventApp.ServicePattern\gloventApp.ServicePattern.csproj">
+      <Project>{89f422dc-d218-4a31-99a5-f90a529d952f}</Project>
+      <Name>gloventApp.ServicePattern</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +69,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
