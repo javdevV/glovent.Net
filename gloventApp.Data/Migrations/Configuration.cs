@@ -9,9 +9,10 @@ namespace gloventApp.Data.Migrations
     {
         public Configuration()
         {
-
             AutomaticMigrationsEnabled = false;
-            SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
+            SetSqlGenerator("MySql.Data.MySqlClient", new
+
+   MySql.Data.Entity.MySqlMigrationSqlGenerator());
         }
 
         protected override void Seed(gloventApp.Data.Models.gloventdbContext context)

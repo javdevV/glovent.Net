@@ -7,13 +7,13 @@ namespace gloventApp.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class houssemDelete : IMigrationMetadata
+    public sealed partial class del : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(houssemDelete));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(del));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611101803019_houssemDelete"; }
+            get { return "201611141713080_del"; }
         }
         
         string IMigrationMetadata.Source

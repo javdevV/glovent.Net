@@ -13,7 +13,7 @@ namespace gloventApp.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611091108474_InitialSchema"; }
+            get { return "201611141709343_InitialSchema"; }
         }
         
         string IMigrationMetadata.Source

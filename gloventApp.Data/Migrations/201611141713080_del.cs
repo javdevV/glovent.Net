@@ -3,23 +3,22 @@ namespace gloventApp.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class houssemDelete : DbMigration
+    public partial class del : DbMigration
     {
         public override void Up()
         {
-            DropTable("dbo.hous");
+            DropTable("dbo.testas");
         }
         
         public override void Down()
         {
             CreateTable(
-                "dbo.hous",
+                "dbo.testas",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        nom = c.Int(nullable: false),
+                        id = c.Int(nullable: false, identity: true),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.id);
             
         }
     }

@@ -31,13 +31,15 @@ namespace gloventApp.Data.Models.Mapping
             this.Property(t => t.MyCategory_id).HasColumnName("MyCategory_id");
             this.Property(t => t.MyOrganization_id).HasColumnName("MyOrganization_id");
             this.Property(t => t.MyRegistrationForm_id).HasColumnName("MyRegistrationForm_id");
+            this.Property(t => t.nombreParticipant).HasColumnName("nombreParticipant");
+            this.Property(t => t.type).HasColumnName("type");
 
             // Relationships
             this.HasMany(t => t.users)
                 .WithMany(t => t.events)
                 .Map(m =>
                     {
-                        m.ToTable("events_users", "gloventdb");
+                        m.ToTable("events_users");
                         m.MapLeftKey("listeE_idEvent");
                         m.MapRightKey("listeP_idUser");
                     });

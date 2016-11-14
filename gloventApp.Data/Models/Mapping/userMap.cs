@@ -36,6 +36,12 @@ namespace gloventApp.Data.Models.Mapping
             this.Property(t => t.pwd)
                 .HasMaxLength(255);
 
+            this.Property(t => t.friendrand)
+                .HasMaxLength(255);
+
+            this.Property(t => t.rand)
+                .HasMaxLength(255);
+
             // Table & Column Mappings
             this.ToTable("users");
             this.Property(t => t.DTYPE).HasColumnName("DTYPE");
@@ -51,6 +57,8 @@ namespace gloventApp.Data.Models.Mapping
             this.Property(t => t.pwd).HasColumnName("pwd");
             this.Property(t => t.attachement_file).HasColumnName("attachement_file");
             this.Property(t => t.MyOrganization_id).HasColumnName("MyOrganization_id");
+            this.Property(t => t.friendrand).HasColumnName("friendrand");
+            this.Property(t => t.rand).HasColumnName("rand");
 
             // Relationships
             this.HasOptional(t => t.organization)

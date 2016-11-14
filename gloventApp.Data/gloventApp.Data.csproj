@@ -71,17 +71,17 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201611091108474_InitialSchema.cs" />
-    <Compile Include="Migrations\201611091108474_InitialSchema.Designer.cs">
-      <DependentUpon>201611091108474_InitialSchema.cs</DependentUpon>
+    <Compile Include="Migrations\201611141709343_InitialSchema.cs" />
+    <Compile Include="Migrations\201611141709343_InitialSchema.Designer.cs">
+      <DependentUpon>201611141709343_InitialSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611091110169_h.cs" />
-    <Compile Include="Migrations\201611091110169_h.Designer.cs">
-      <DependentUpon>201611091110169_h.cs</DependentUpon>
+    <Compile Include="Migrations\201611141711460_test.cs" />
+    <Compile Include="Migrations\201611141711460_test.Designer.cs">
+      <DependentUpon>201611141711460_test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611101803019_houssemDelete.cs" />
-    <Compile Include="Migrations\201611101803019_houssemDelete.Designer.cs">
-      <DependentUpon>201611101803019_houssemDelete.cs</DependentUpon>
+    <Compile Include="Migrations\201611141713080_del.cs" />
+    <Compile Include="Migrations\201611141713080_del.Designer.cs">
+      <DependentUpon>201611141713080_del.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\gloventdbContext.cs" />
@@ -91,14 +91,21 @@
     <Compile Include="Models\Mapping\complaintMap.cs" />
     <Compile Include="Models\Mapping\eventMap.cs" />
     <Compile Include="Models\Mapping\fieldMap.cs" />
+    <Compile Include="Models\Mapping\forumMap.cs" />
+    <Compile Include="Models\Mapping\galerieMap.cs" />
+    <Compile Include="Models\Mapping\imageMap.cs" />
+    <Compile Include="Models\Mapping\likeimageMap.cs" />
+    <Compile Include="Models\Mapping\likevideoMap.cs" />
     <Compile Include="Models\Mapping\organizationMap.cs" />
     <Compile Include="Models\Mapping\pollMap.cs" />
     <Compile Include="Models\Mapping\questionMap.cs" />
     <Compile Include="Models\Mapping\registrationformMap.cs" />
     <Compile Include="Models\Mapping\surveyMap.cs" />
     <Compile Include="Models\Mapping\taskMap.cs" />
+    <Compile Include="Models\Mapping\threadMap.cs" />
     <Compile Include="Models\Mapping\ticketMap.cs" />
     <Compile Include="Models\Mapping\userMap.cs" />
+    <Compile Include="Models\Mapping\videoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,23 +114,20 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\gloventApp.Domain\gloventApp.Domain.csproj">
-      <Project>{eabf4f89-3688-4185-9fca-f3390eca139b}</Project>
+      <Project>{1c26a027-acaa-4531-9ba0-be851a4b8934}</Project>
       <Name>gloventApp.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611091108474_InitialSchema.resx">
-      <DependentUpon>201611091108474_InitialSchema.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611141709343_InitialSchema.resx">
+      <DependentUpon>201611141709343_InitialSchema.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611091110169_h.resx">
-      <DependentUpon>201611091110169_h.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611141711460_test.resx">
+      <DependentUpon>201611141711460_test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611101803019_houssemDelete.resx">
-      <DependentUpon>201611101803019_houssemDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611141713080_del.resx">
+      <DependentUpon>201611141713080_del.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

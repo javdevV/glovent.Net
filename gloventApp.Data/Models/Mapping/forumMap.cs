@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace gloventApp.Data.Models.Mapping
@@ -19,15 +19,11 @@ namespace gloventApp.Data.Models.Mapping
                 .HasMaxLength(255);
 
             // Table & Column Mappings
-            this.ToTable("forum", "glovent");
+            this.ToTable("forum");
             this.Property(t => t.name).HasColumnName("name");
             this.Property(t => t.description).HasColumnName("description");
+            this.Property(t => t.initiator).HasColumnName("initiator");
             this.Property(t => t.threads).HasColumnName("threads");
-            this.Property(t => t.initiator_idUser).HasColumnName("initiator_idUser");
-
-            // Relationships
-            this.HasOptional(t => t.user);
-
         }
     }
 }

@@ -31,7 +31,7 @@ namespace gloventApp.Data.Models.Mapping
                 .WithMany(t => t.organizations)
                 .Map(m =>
                     {
-                        m.ToTable("organization_users", "gloventdb");
+                        m.ToTable("organization_users");
                         m.MapLeftKey("listOrganization_id");
                         m.MapRightKey("listUsers_idUser");
                     });

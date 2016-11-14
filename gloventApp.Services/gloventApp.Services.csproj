@@ -53,7 +53,7 @@
       <Name>gloventApp.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\gloventApp.Domain\gloventApp.Domain.csproj">
-      <Project>{eabf4f89-3688-4185-9fca-f3390eca139b}</Project>
+      <Project>{1c26a027-acaa-4531-9ba0-be851a4b8934}</Project>
       <Name>gloventApp.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\gloventApp.ServicePattern\gloventApp.ServicePattern.csproj">
