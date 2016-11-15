@@ -58,3 +58,4 @@ C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Da
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.etattt.resources
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.etatttt.resources
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.finaletat.resources
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.x.resources

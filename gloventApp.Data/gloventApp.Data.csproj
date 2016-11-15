@@ -95,6 +95,10 @@
     <Compile Include="Migrations\201611151823327_finaletat.Designer.cs">
       <DependentUpon>201611151823327_finaletat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611151842389_x.cs" />
+    <Compile Include="Migrations\201611151842389_x.Designer.cs">
+      <DependentUpon>201611151842389_x.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\gloventdbContext.cs" />
     <Compile Include="Models\Mapping\answerMap.cs" />
@@ -148,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611151823327_finaletat.resx">
       <DependentUpon>201611151823327_finaletat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611151842389_x.resx">
+      <DependentUpon>201611151842389_x.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

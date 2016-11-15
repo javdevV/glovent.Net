@@ -58,15 +58,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.etatt, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.etatt)
-                    @Html.ValidationMessageFor(model => model.etatt, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+       
 
         <div class="form-group">
             @Html.LabelFor(model => model.theme, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -129,5 +121,4 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
 
