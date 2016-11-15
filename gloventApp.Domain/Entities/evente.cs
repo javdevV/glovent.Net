@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gloventApp.Data.Models
 {
@@ -17,9 +18,11 @@ namespace gloventApp.Data.Models
 
         public int idEvent { get; set; }
         public bool avaibility { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> dateEvent { get; set; }
         public string localisation { get; set; }
         public string nameEvent { get; set; }
+        public bool etatt { get; set; }
         public string theme { get; set; }
         public Nullable<int> MyCategory_id { get; set; }
         public Nullable<int> MyOrganization_id { get; set; }

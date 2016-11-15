@@ -81,6 +81,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -212,12 +213,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -279,16 +283,19 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Event\Details.cshtml" />
+    <Content Include="Views\Event\Delete.cshtml" />
+    <Content Include="Views\Event\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\assets\" />
-    <Folder Include="Content\css\" />
-    <Folder Include="Content\fonts\" />
-    <Folder Include="Content\images\" />
-    <Folder Include="Content\img\" />
-    <Folder Include="Content\js\" />
+    <Folder Include="Content\bootstrap\" />
+    <Folder Include="Content\build\" />
+    <Folder Include="Content\dist\" />
+    <Folder Include="Content\pages\" />
     <Folder Include="Content\plugins\" />
+    <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -297,6 +304,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gloventApp.Data\gloventApp.Data.csproj">
+      <Project>{962f3d73-75a6-422c-b12a-659e3319dae8}</Project>
+      <Name>gloventApp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gloventApp.Domain\gloventApp.Domain.csproj">
+      <Project>{1c26a027-acaa-4531-9ba0-be851a4b8934}</Project>
+      <Name>gloventApp.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gloventApp.ServicePattern\gloventApp.ServicePattern.csproj">
+      <Project>{89f422dc-d218-4a31-99a5-f90a529d952f}</Project>
+      <Name>gloventApp.ServicePattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gloventApp.Services\gloventApp.Services.csproj">
+      <Project>{06e7d997-2b78-47a2-8969-bfa25b98e0db}</Project>
+      <Name>gloventApp.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

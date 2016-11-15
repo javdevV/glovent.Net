@@ -85,3 +85,13 @@ C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GU
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\obj\Debug\gloventApp.GUI.csprojResolveAssemblyReference.cache
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\obj\Debug\gloventApp.GUI.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\obj\Debug\gloventApp.GUI.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.ServicePattern.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.Services.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.Data.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.Domain.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\MySql.Data.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.ServicePattern.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.Services.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.Data.pdb
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.GUI\bin\gloventApp.Domain.pdb

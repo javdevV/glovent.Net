@@ -83,6 +83,14 @@
     <Compile Include="Migrations\201611141713080_del.Designer.cs">
       <DependentUpon>201611141713080_del.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611151745243_etattt.cs" />
+    <Compile Include="Migrations\201611151745243_etattt.Designer.cs">
+      <DependentUpon>201611151745243_etattt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611151746577_etatttt.cs" />
+    <Compile Include="Migrations\201611151746577_etatttt.Designer.cs">
+      <DependentUpon>201611151746577_etatttt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\gloventdbContext.cs" />
     <Compile Include="Models\Mapping\answerMap.cs" />
@@ -127,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611141713080_del.resx">
       <DependentUpon>201611141713080_del.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611151745243_etattt.resx">
+      <DependentUpon>201611151745243_etattt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611151746577_etatttt.resx">
+      <DependentUpon>201611151746577_etatttt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

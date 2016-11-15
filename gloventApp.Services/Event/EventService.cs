@@ -45,7 +45,7 @@ namespace gloventApp.Services.Event
 
         public IEnumerable<evente> GetAllEvents()
         {
-            return uow.getRepository<evente>().GetMany().ToList();
+            return uow.getRepository<evente>().GetMany().Where(e=>e.avaibility=true).ToList();
         }
 
 

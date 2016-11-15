@@ -1,0 +1,146 @@
+﻿@model IEnumerable<gloventApp.Data.Models.evente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idEvent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avaibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateEvent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.localisation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nameEvent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.theme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyCategory_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyOrganization_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyRegistrationForm_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreParticipant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEvent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avaibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateEvent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.localisation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameEvent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.theme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyCategory_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyOrganization_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyRegistrationForm_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreParticipant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+
+
+
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Events</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.idEvent)</th>
+                    <th>@Html.DisplayNameFor(model => model.nameEvent)</th>
+                    <th>@Html.DisplayNameFor(model => model.dateEvent)</th>
+                    <th>@Html.DisplayNameFor(model => model.localisation)</th>
+                    <th>@Html.DisplayNameFor(model => model.avaibility)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+@foreach (var item in Model)
+{
+                <tr><td>@Html.DisplayFor(modelItem => item.idEvent)</td>
+                <td>@Html.DisplayFor(modelItem => item.nameEvent)</td>
+                <td>@Html.DisplayFor(modelItem => item.dateEvent)</td>
+                <td>@Html.DisplayFor(modelItem => item.localisation)</td>
+                <td>@Html.DisplayFor(modelItem => item.avaibility)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {  id=item.idEvent }) |
+                    @Html.ActionLink("Details", "Details", new {  id=item.idEvent }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.idEvent })
+                </td>
+
+                </tr>
+                
+}
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.idEvent)</th>
+                    <th>@Html.DisplayNameFor(model => model.nameEvent)</th>
+                    <th>@Html.DisplayNameFor(model => model.dateEvent)</th>
+                    <th>@Html.DisplayNameFor(model => model.localisation)</th>
+                    <th>@Html.DisplayNameFor(model => model.avaibility)</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>
+

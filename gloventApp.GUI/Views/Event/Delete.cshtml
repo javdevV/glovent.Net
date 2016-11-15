@@ -1,0 +1,113 @@
+﻿@model gloventApp.Data.Models.evente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>evente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.avaibility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.avaibility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.localisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.localisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nameEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.theme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.theme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyCategory_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyCategory_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyOrganization_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyOrganization_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyRegistrationForm_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyRegistrationForm_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreParticipant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreParticipant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
