@@ -24,7 +24,7 @@ namespace gloventApp.Data.Models.Mapping
             this.ToTable("events");
             this.Property(t => t.idEvent).HasColumnName("idEvent");
             this.Property(t => t.avaibility).HasColumnName("avaibility");
-            this.Property(t => t.etatt).HasColumnName("etatt");
+            
             this.Property(t => t.dateEvent).HasColumnName("dateEvent");
             this.Property(t => t.localisation).HasColumnName("localisation");
             this.Property(t => t.nameEvent).HasColumnName("nameEvent");

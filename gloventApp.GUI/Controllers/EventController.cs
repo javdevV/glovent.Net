@@ -65,6 +65,7 @@ namespace gloventApp.GUI.Controllers
         }
 
         // POST: Event/Edit/5
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {

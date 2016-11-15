@@ -22,7 +22,7 @@ namespace gloventApp.Data.Models
         public Nullable<System.DateTime> dateEvent { get; set; }
         public string localisation { get; set; }
         public string nameEvent { get; set; }
-        public bool etatt { get; set; }
+       
         public string theme { get; set; }
         public Nullable<int> MyCategory_id { get; set; }
         public Nullable<int> MyOrganization_id { get; set; }
