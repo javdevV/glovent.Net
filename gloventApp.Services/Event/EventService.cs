@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace gloventApp.Services.Event
 {
-    public class EventService : Service<evente>, IEventService
+    public class EventService : Service<evente>
     {
         static IDatabaseFactory factory = new DatabaseFactory();
         static IUnitOfWork uow = new UnitOfWork(factory);
@@ -18,34 +18,233 @@ namespace gloventApp.Services.Event
 
         }
 
-        public void DeleteEvent(int id)
+       
+
+
+        public int GetNumberEvents()
         {
-            evente e = GetEventById(id);
-            uow.getRepository<evente>().Delete(e);
-            uow.Commit();
+
+
+            return this.GetAllEvents().Count();
+
+
         }
 
-        public evente GetEventById(int id)
+
+
+
+
+
+
+
+        public int GetTodayNumberEvents()
         {
-            foreach (evente e in GetAllEvents())
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Day.Equals(DateTime.Now.Day)).Count();
+
+
+        }
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public IEnumerable<evente> GetTodayEvents()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Day.Equals(DateTime.Now.Day)).ToList();
+
+
+        }
+
+
+
+
+
+
+        public IEnumerable<evente> GetThisMonthEvents()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Month.Equals(DateTime.Now.Month)).ToList();
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public int GetNumberEventsThisMounth()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Month.Equals(DateTime.Now.Month)).Count();
+
+        }
+
+
+
+        public int GetNumberEventsLastMounth()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Month.Equals(DateTime.Now.AddMonths(-1).Month)).Count();
+
+        }
+
+
+
+
+
+      
+
+        public int GetNumberEventsI(int i)
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Month.Equals(i)).Count();
+
+        }
+
+
+
+        public int GetNumberLastYearEvents()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Year.Equals(DateTime.Now.AddYears(-1).Year)).Count();
+
+        }
+
+        public int GetNumberLastYearEvents1()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Year.Equals(DateTime.Now.AddYears(-2).Year)).Count();
+
+
+        }
+
+        public int GetNumberthisYearEvents1()
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Year.Equals(DateTime.Now.Year)).Count();
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public List<int> GetNumberEventsEveryMonth()
+        {
+          //  IEnumerable<evente> le = GetAllEvents();
+            List<int> num = new List<int>();
+            for (int i = 1; i <num.Count; i++)
             {
-                if (e.idEvent == id)
-                    return e;
+
+                num[i] = uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Month.Equals(i)).Count();
             }
-            return null;
+            return num;
+           
         }
 
-        public void updateEvent(int id)
-        {
-            evente e = GetEventById(id);   
-            uow.getRepository<evente>().Update(e);
-            uow.Commit();
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         public IEnumerable<evente> GetAllEvents()
         {
-            return uow.getRepository<evente>().GetMany().Where(e=>e.avaibility=true).ToList();
+            return uow.getRepository<evente>().GetMany().ToList();
         }
 
 
@@ -54,26 +253,54 @@ namespace gloventApp.Services.Event
 
         public List<evente> GetNextWeekEvents()
         {
-            var evts = uow.getRepository<evente>().GetMany().Where(e => e.dateEvent>= DateTime.Now.AddDays(7) && e.dateEvent <= DateTime.Now.AddDays(14)).OrderBy(e => e.dateEvent).ToList();
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent>= DateTime.Now.AddDays(7) && e.dateEvent <= DateTime.Now.AddDays(14)).OrderBy(e => e.dateEvent).ToList();
 
-            return evts;
+            
         }
 
         public List<evente> GetLastWeekEvents()
         {
 
-            var evts = uow.getRepository<evente>().GetMany().Where(e => e.dateEvent<= DateTime.Now.AddDays(-7) && e.dateEvent >= DateTime.Now.AddDays(-14)).OrderBy(e => e.dateEvent).ToList();
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent<= DateTime.Now.AddDays(-7) && e.dateEvent >= DateTime.Now.AddDays(-14)).OrderBy(e => e.dateEvent).ToList();
 
-            return evts;
+           
         }
 
 
         public evente GetMostParticipationEvent()
         {
-            var evt = uow.getRepository<evente>().GetMany().OrderBy(e => -e.tickets.Count).FirstOrDefault();
+            return uow.getRepository<evente>().GetMany().OrderBy(e => -e.users.Count).FirstOrDefault();
 
-            return evt;
+            
+
+
+           
+
         }
+
+
+
+
+
+        public IEnumerable<evente> EventProchainAlaUneBycategoryEtDispo(category cat,organization org)
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.dateEvent.Value.Day>=DateTime.Now.AddDays(7).Day
+            && e.dateEvent.Value.Day <= DateTime.Now.AddDays(14).Day && e.tickets.Count() >= 0 
+            && e.Myo.Equals(org.id) && e.nombreParticipant>=100 && e.avaibility==true && e.category.Equals(cat));
+
+
+        }
+
+
+
+
+       
+
+
+
+
 
 
 

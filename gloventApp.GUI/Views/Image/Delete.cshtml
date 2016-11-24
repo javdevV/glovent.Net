@@ -1,0 +1,75 @@
+﻿@model gloventApp.GUI.Models.imageModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+    <h3>Are you sure you want to delete this?</h3>
+    <h2>Image</h2>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.aime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.danger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.danger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.visib)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.visib)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyPatricipant_idUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyPatricipant_idUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.galerie_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.galerie_id)
+        </dd>
+
+    </dl>
+</div>
+<div class="timeline-footer">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger btn-xs" /> |
+            <button class="btn btn-primary btn-xs">@Html.ActionLink("Back to List", "Index")</button>
+        </div>
+    }
+</div>

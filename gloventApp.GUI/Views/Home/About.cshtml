@@ -5,3 +5,26 @@
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Map an Address</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Map an Address</h1>
+
+
+    @Maps.GetGoogleHtml(Request.Form["Grünbaumstraße 7942659 Solingen, Germany"],
+            width: "400",
+            height: "400")
+
+</body>
+</html>

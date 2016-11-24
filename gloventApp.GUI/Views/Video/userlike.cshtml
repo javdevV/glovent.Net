@@ -1,0 +1,76 @@
+﻿@model IEnumerable<gloventApp.Data.Models.likevideo>
+
+@{
+    ViewBag.Title = "userlike";
+}
+
+
+
+
+
+
+
+
+<style>
+    .example-modal .modal {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        display: block;
+        z-index: 1;
+    }
+
+    .example-modal .modal {
+        background: transparent !important;
+    }
+</style>
+<section class="content">
+
+
+
+    <div class="example-modal">
+        <div class="modal modal-primary">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">userlike</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.user.fName)
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.user.fName)
+                                </td>
+
+                            </tr>
+                        }
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!-- /.example-modal -->
+
+
+
+</section>

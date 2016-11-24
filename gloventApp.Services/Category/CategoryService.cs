@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace gloventApp.Services.Category
 {
-    class CategoryService : Service<category>, ICategoryService
+   public class CategoryService : Service<category>
     {
         static IDatabaseFactory factory = new DatabaseFactory();
         static IUnitOfWork uow = new UnitOfWork(factory);
@@ -19,23 +19,7 @@ namespace gloventApp.Services.Category
         }
 
 
-        public void AddCategory(category c)
-        {
-            uow.getRepository<category>().Add(c);
-            uow.Commit();
-        }
-
-        public void DeleteCategory(category c)
-        {
-            uow.getRepository<category>().Delete(c);
-            uow.Commit();
-        }
-
-        public void EditCategory(category c)
-        {
-            uow.getRepository<category>().Update(c);
-            uow.Commit();
-        }
+       
 
         public List<category> getAllCategories()
         {
@@ -43,6 +27,63 @@ namespace gloventApp.Services.Category
         }
 
 
+
+        public int numberOfCategories()
+        {
+
+
+            return getAllCategories().Count();
+
+
+        }
+
+
+
+
+        public int numberOfEventsInCategory(int id)
+        {
+
+
+            return uow.getRepository<evente>().GetMany().Where(e => e.MyCategory_id.Equals(id)).Count();
+
+
+        }
+
+
+
+
+
+
+
+
+        public int[] cate()
+        {
+
+
+            int[] tab = new int[getAllCategories().ToList().Count];
+
+
+            for(int i=0;i< getAllCategories().ToList().Count; i++)
+            {
+
+                tab[i] = nec(i);
+
+                return tab;
+            }
+            return null;
+
+        }
+
+
+
+
+        public int nec(int id)
+        {
+
+            return uow.getRepository<evente>().GetMany(e => e.category.id.Equals(id)).Sum(e => e.nombreParticipant);
+
+
+        }
 
 
 

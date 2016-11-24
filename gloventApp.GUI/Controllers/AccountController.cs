@@ -9,12 +9,20 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using gloventApp.GUI.Models;
+using gloventApp.Data.Models;
+using glovent.App.Services;
+using gloventApp.Data.Infrastructure;
 
 namespace gloventApp.GUI.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+
+       
+
+
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -22,7 +30,7 @@ namespace gloventApp.GUI.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -34,9 +42,9 @@ namespace gloventApp.GUI.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -61,8 +69,20 @@ namespace gloventApp.GUI.Controllers
             return View();
         }
 
+
+
+   
+
+
+
+
+
+
+
+
         //
         // POST: /Account/Login
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -73,23 +93,48 @@ namespace gloventApp.GUI.Controllers
                 return View(model);
             }
 
+
+
+            //mel J2E wala ANgular lel Dot Net iparsi el mdp 
+            var u = UserManager.Users.Where(e => e.Email == model.Email && e.pwd == model.Password).First();
+            if ((u.PasswordHash == null) || (u.PasswordHash == ""))
+            {
+
+                //hkeyet el identity fel dot net 3ala J2E
+
+                PasswordHasher passwordHasher = new PasswordHasher(); // hashage de mdp pour la sécurité 
+                u.UserName = model.Email;
+                u.PasswordHash = passwordHasher.HashPassword(model.Password);
+                u.SecurityStamp = Guid.NewGuid().ToString();//retourne une chaine selon le format fournit 
+                u.LockoutEnabled = true;
+
+                UserManager.Update(u);
+                UserManager.AddToRole(u.Id, u.DTYPE);
+            }
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
+
+
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index1", "Event");
+                   // return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
-                    return View("Lockout");
+                    //return View("Lockout");
+                    return RedirectToAction("Index1", "Event");
                 case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    //return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    return RedirectToAction("Index1", "Event");
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
         }
+
 
         //
         // GET: /Account/VerifyCode
@@ -120,7 +165,7 @@ namespace gloventApp.GUI.Controllers
             // If a user enters incorrect codes for a specified amount of time then the user account 
             // will be locked out for a specified amount of time. 
             // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -151,19 +196,41 @@ namespace gloventApp.GUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new user
+                {
+                    Email = model.Email,
+                    UserName = model.Email,
+                    fName = model.fName,
+                    AccountState = true,
+                    DTYPE = "user",//a ne plus toucher
+                    age = model.age,
+                    pwd = model.Password ,//il va sauvgarder dans password la valeur entrer 
+                   MyOrganization_id = null
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                  //  await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
+                    CustomRole role = new CustomRole(user.DTYPE);
+                    var manage = HttpContext.GetOwinContext().GetUserManager<gloventdbContext>();
+                    if (manage.Roles.Count(r => r.Name.Equals(user.DTYPE)) == 0)
+                    {
+                        manage.Roles.Add(role);
+                        manage.SaveChanges();
+
+                    }
+                    UserManager.AddToRole(user.Id, user.DTYPE);
+
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Login", "Account");
                 }
                 AddErrors(result);
             }
@@ -175,9 +242,9 @@ namespace gloventApp.GUI.Controllers
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
-        public async Task<ActionResult> ConfirmEmail(string userId, string code)
+        public async Task<ActionResult> ConfirmEmail(int userId, string code)
         {
-            if (userId == null || code == null)
+            if (userId == default(int) || code == null)
             {
                 return View("Error");
             }
@@ -211,10 +278,10 @@ namespace gloventApp.GUI.Controllers
 
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                //string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                //var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                //await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                //return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             // If we got this far, something failed, redisplay form
@@ -248,7 +315,9 @@ namespace gloventApp.GUI.Controllers
             {
                 return View(model);
             }
+            //var user = UserManager.Users.Where(e=>e.pwd == model.Password).First();
             var user = await UserManager.FindByNameAsync(model.Email);
+
             if (user == null)
             {
                 // Don't reveal that the user does not exist
@@ -367,7 +436,7 @@ namespace gloventApp.GUI.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new user { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

@@ -1,0 +1,118 @@
+﻿@model gloventApp.GUI.Models.videoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+
+<style>
+    .example-modal .modal {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        display: block;
+        z-index: 1;
+    }
+
+    .example-modal .modal {
+        background: transparent !important;
+    }
+</style>
+<section class="content">
+
+
+
+    <div class="example-modal">
+        <div class="modal modal-primary">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Caracteristique geniral</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>   Name: @Html.DisplayFor(model => model.name)</p>
+
+                        <p>
+                        <p>   Url: @Html.DisplayFor(model => model.url)</p>
+
+                        <p>
+                            Visibilite
+                            @Html.DisplayFor(model => model.visib)
+                        </p>
+                        <p>
+                            Date Visibilite
+                            @Html.DisplayFor(model => model.dateinvisibl)
+                        </p>
+                        <p>
+                            User Name
+                            @Html.DisplayFor(model => model.user.lName)
+                        </p>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!-- /.example-modal -->
+
+    <div class="example-modal">
+        <div class="modal modal-info">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Like /signal info</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nombre Like <i class="fa fa-thumbs-o-up"></i>:  @Html.DisplayFor(model => model.aime)</p>
+                        <p> Nombre Signal <i class="fa fa-thumbs-o-down"></i>: @Html.DisplayFor(model => model.danger)</p>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="example-modal">
+        <div class="modal modal-warning">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Video</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        @{ string path = "~/Content/Upload/" + @Html.DisplayFor(model => model.url) +".MVK";}
+                        
+                        <iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+
+                     
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+</section>

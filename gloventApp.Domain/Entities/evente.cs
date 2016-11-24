@@ -25,7 +25,8 @@ namespace gloventApp.Data.Models
        
         public string theme { get; set; }
         public Nullable<int> MyCategory_id { get; set; }
-        public Nullable<int> MyOrganization_id { get; set; }
+
+        public Nullable<int> Myo { get; set; }
         public Nullable<int> MyRegistrationForm_id { get; set; }
         public int nombreParticipant { get; set; }
         public bool type { get; set; }
@@ -38,5 +39,31 @@ namespace gloventApp.Data.Models
         public virtual ICollection<galerie> galeries { get; set; }
         public virtual organization organization { get; set; }
         public virtual ICollection<user> users { get; set; }
+        public double longi { get; set; }
+        public double lapti { get; set; }
+       
+
+
+
+
+
+
+
+
+
+        public int calculateNumberParticiapant()
+        {
+            int number = 0;
+            foreach (user u in users)
+            {
+                number += 1;
+            }
+            this.nombreParticipant = number;
+            return number;
+        }
+
+
+
+
     }
 }

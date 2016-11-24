@@ -10,17 +10,26 @@ namespace gloventApp.Data.Models.Mapping
             // Primary Key
             this.HasKey(t => t.id);
 
-            // Properties
-            this.Property(t => t.id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+          
+
 
             this.Property(t => t.Libelle)
                 .HasMaxLength(255);
+
+
+            this.Property(t => t.image);
+
+
+
 
             // Table & Column Mappings
             this.ToTable("category");
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.Libelle).HasColumnName("Libelle");
+            this.Property(t => t.image).HasColumnName("image");
+
+
+
         }
     }
 }

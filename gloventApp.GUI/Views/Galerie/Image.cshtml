@@ -1,0 +1,89 @@
+﻿@model IEnumerable<gloventApp.GUI.Models.imageModel>
+
+
+
+@{
+    ViewBag.Title = "Image";
+}
+
+<h2>Image</h2>
+
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Hover Data Table</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+            <tbody>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.aime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.danger)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.visib)
+                    </th>
+                    
+
+                    <th>Action</th>
+
+                </tr>
+            </tbody>
+                       @foreach (var item in ViewBag.images)
+                       {
+                        <tr>
+                            <td>
+                                @item.aime
+                            </td>
+                            <td>
+                               @item.danger
+                            </td>
+                            <td>
+                                @item.name
+                            </td>
+                            <td>
+                                @item.visib
+                                
+                            </td>
+                           
+                          
+
+                            <td>
+
+                                @Html.ActionLink("Details", "DetailsImage", new { id = item.id })
+
+
+                                @Html.ActionLink("Delete", "DeleteImage", new { id = item.id })
+
+                                @if (item.visib == true)
+                                {
+
+
+                                    @Html.ActionLink("Invisible", "Invisible", new { id = item.id })
+
+
+                                }
+                                else
+                                {
+
+                                    @Html.ActionLink("Visible", "Visible", new { id = item.id })
+
+                                }
+                            </td>
+
+
+                            
+                        </tr>
+                       }
+            
+</table>
+    </div>
+</div>

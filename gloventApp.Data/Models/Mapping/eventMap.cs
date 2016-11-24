@@ -30,10 +30,12 @@ namespace gloventApp.Data.Models.Mapping
             this.Property(t => t.nameEvent).HasColumnName("nameEvent");
             this.Property(t => t.theme).HasColumnName("theme");
             this.Property(t => t.MyCategory_id).HasColumnName("MyCategory_id");
-            this.Property(t => t.MyOrganization_id).HasColumnName("MyOrganization_id");
+            //this.Property(t => t.MyOrganization_id1).HasColumnName("MyOrganization_id1");
             this.Property(t => t.MyRegistrationForm_id).HasColumnName("MyRegistrationForm_id");
             this.Property(t => t.nombreParticipant).HasColumnName("nombreParticipant");
             this.Property(t => t.type).HasColumnName("type");
+            this.Property(t => t.lapti).HasColumnName("lapti");
+            this.Property(t => t.longi).HasColumnName("longi");
 
             // Relationships
             this.HasMany(t => t.users)
@@ -51,9 +53,9 @@ namespace gloventApp.Data.Models.Mapping
             this.HasOptional(t => t.registrationform)
                 .WithMany(t => t.events)
                 .HasForeignKey(d => d.MyRegistrationForm_id);
-            this.HasOptional(t => t.organization)
-                .WithMany(t => t.events)
-                .HasForeignKey(d => d.MyOrganization_id);
+            //this.HasOptional(t => t.organization)
+            //    .WithMany(t => t.events)
+            //    .HasForeignKey(d => d.MyOrganization_id1);
 
         }
     }

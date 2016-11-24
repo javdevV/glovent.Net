@@ -1,0 +1,138 @@
+﻿@using Jmelosegui.Mvc.GoogleMap
+@model gloventApp.GUI.Models.OrganizationViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+ 
+  <!-- Map box -->
+<div class="box box-solid bg-light-blue-gradient">
+    <div class="box-header">
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
+                <i class="fa fa-minus"></i>
+            </button>
+        </div>
+        <!-- /. tools -->
+
+        <i class="fa fa-map-marker"></i>
+
+        <h3 class="box-title">
+            Visitors
+        </h3>
+    </div>
+    <div class="box-body">
+        <div class="row">
+                 @(
+    Html.GoogleMap()
+        .Name("map")
+        .Height(300)
+        .Center(c => c.Address(Model.Location))
+        .Markers(m => m.Add()).ApiKey("AIzaSyCtmb5sclkiJ3F0uRvv11mESYn1iJ2GvyI")
+                )
+                @*.ApiKey("AIzaSyCtmb5sclkiJ3F0uRvv11mESYn1iJ2GvyI")//AIzaSyBLuPnlOxS2GWFTZNMNtiPKop1zi0tXm8c*@
+        </div> 
+    
+       </div>
+    <!-- /.box-body-->
+    <div class="box-footer no-border">
+        <div class="row">
+            <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                <div id="sparkline-1"></div>
+                <div class="knob-label"> </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                <div id="sparkline-2"></div>
+                <div class="knob-label"> </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-xs-4 text-center">
+                <div id="sparkline-3"></div>
+                <div class="knob-label"> </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<!-- /.box -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <h4>OrganizationViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.President.fName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.President.fName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        
+     </dl>
+    
+    
+
+
+
+
+</div>
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @(Html.GoogleMap().ScriptRegistrar())
+}

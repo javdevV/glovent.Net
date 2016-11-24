@@ -1,0 +1,147 @@
+﻿@model DotNet.Highcharts.Highcharts
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="">
+<ul class="users-list clearfix" style="margin-left:500px;padding-top:50px">
+   
+        <li>
+            @{ string path111 = "~/Content/upload/" + ViewBag.p.image;}
+            <img src="@Url.Content(path111)" style="width:50px;height:50px" alt="User Image">
+            @{ string path1111 = "" + ViewBag.p.Libelle;}
+            <a class="users-list-name" href="#"><b>@Html.ActionLink(path1111, "Details", new { id = ViewBag.p.id })</b> </a>
+
+        </li>
+                
+</ul>
+<ul class="users-list clearfix row" style="padding-left:31%;padding-bottom:210px">
+    <li class="col-md-4" style="margin-bottom:20px">
+        @{ string path2 = "~/Content/upload/" + ViewBag.p2.image;}
+        <img src="@Url.Content(path2)" style="width:50px;height:50px" alt="User Image">
+        @{ string path22 = "" + ViewBag.p2.Libelle;}
+        <a class="users-list-name" href="#"><b>@Html.ActionLink(path22, "Details", new { id = ViewBag.p2.id })</b> </a>
+
+    </li>
+    
+    <li class="col-md-4" style="margin-left:58px">
+        @{ string path3 = "~/Content/upload/" + ViewBag.p1.image;}
+        <img src="@Url.Content(path3)" style="width:50px;height:50px" alt="User Image">
+        @{ string path33 = "" + ViewBag.p1.Libelle;}
+        <a class="users-list-name" href="#"><b>@Html.ActionLink(path33, "Details", new { id = ViewBag.p1.id })</b> </a>
+
+    </li>
+    </ul>
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><img src="~/Content/upload/podium.png" style=" position: absolute;bottom: 800px;right: 370px;" /></center>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-12">
+    <!-- USERS LIST -->
+    <div class="box box-danger">
+        <div class="box-header with-border">
+            <h3 class="box-title">All Categories</h3>
+            <div class="box-tools pull-right">
+                <span class="label label-danger"></span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+
+
+            <ul class="users-list clearfix">
+                @foreach (var person in ViewBag.l)
+            {
+                    <li>
+                        @{ string path = "~/Content/upload/"+ @person.image;}
+                        <img src="@Url.Content(path)" style="width:50px;height:50px" alt="User Image">
+                        @{ string path1 = "" + @person.Libelle;}
+                        <a class="users-list-name" href="#">@Html.ActionLink(path1, "Details", new { id = person.id }) </a>
+                        
+                    </li>
+                            }
+            </ul>
+
+            <!-- /.users-list -->
+        </div>
+
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+            @Html.ActionLink("View All Categories", "Index")
+        </div>
+        <!-- /.box-footer -->
+    </div>
+    <!--/.box -->
+</div>
+
+
+
+
+
+
+@Model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+

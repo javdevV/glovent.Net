@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gloventApp.Data.Models
 {
@@ -13,8 +14,12 @@ namespace gloventApp.Data.Models
         public int id { get; set; }
         public int aime { get; set; }
         public int danger { get; set; }
-        public byte[] image1 { get; set; }
+        [DataType(DataType.ImageUrl)]
+        public string image1 { get; set; }
         public string name { get; set; }
+        public bool visib { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime? dateinvisibl { get; set; }
         public Nullable<int> MyPatricipant_idUser { get; set; }
         public Nullable<int> galerie_id { get; set; }
         public virtual galerie galerie { get; set; }

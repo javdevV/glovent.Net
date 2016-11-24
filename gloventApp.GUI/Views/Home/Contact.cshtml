@@ -15,3 +15,33 @@
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
+
+
+
+
+
+
+
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Content/map/jquery.googlemap.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABKEj9_2l6vmFdvlSdM3KbljX7PqmKrUg"></script>
+
+
+
+
+
+
+<div id="map" style="width: 300px; height: 300px;"></div>
+<script type="text/javascript">
+  $(function() {
+    $("#map").googleMap();
+    $("#map").addMarker({
+        address: "10 Rue Lanne 93200 Saint-Denis, France", // Postale Address
+
+    });
+  })
+</script>
+
+

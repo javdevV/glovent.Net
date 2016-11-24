@@ -1,0 +1,26 @@
+﻿@foreach (var item in ViewBag.x)
+{
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h2>@item.name</h2>
+
+                <p>@item.type</p>
+            </div>
+            <div class="icon">
+                @{ string path = "~/Content/upload/" + @item.President.image;}
+                <i class="">
+                    <img style="background-repeat: no-repeat;background-position: 50%;
+                                                            border-radius: 50%;
+                                                width: 100px;
+                                                height: 100px;" src="@Url.Content(path)" />
+                </i>
+            </div>
+            <a href="#" class="small-box-footer">
+                @Html.ActionLink("More Info", "Details", new { id = item.id }) |
+
+            </a>
+        </div>
+    </div>
+}

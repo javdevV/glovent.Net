@@ -39,23 +39,130 @@ C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Da
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\EntityFramework.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\gloventApp.Domain.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\MySql.Data.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\gloventApp.Domain.pdb
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\EntityFramework.xml
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.csprojResolveAssemblyReference.cache
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.dll
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.pdb
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.InitialSchema.resources
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.csprojResolveAssemblyReference.cache
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.initial.resources
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.imagecat.resources
 C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.csproj.GenerateResource.Cache
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.test.resources
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.del.resources
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.etattt.resources
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.etatttt.resources
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.finaletat.resources
-C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.x.resources
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.dll
+C:\Users\Oussema\Documents\Visual Studio 2015\Projects\glovent.Net\gloventApp.Data\obj\Debug\gloventApp.Data.pdb
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.dll.config
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.pdb
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Domain.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Google.Protobuf.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Owin.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Domain.pdb
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Google.Protobuf.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.csprojResolveAssemblyReference.cache
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.init.resources
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.addazdz.resources
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.csproj.GenerateResource.Cache
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.dll
+C:\Users\Oussema\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.pdb
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.dll.config
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.pdb
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Domain.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Google.Protobuf.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Owin.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\gloventApp.Domain.pdb
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Google.Protobuf.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\MySql.Data.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.csprojResolveAssemblyReference.cache
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.Migrations.addDb.resources
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.csproj.GenerateResource.Cache
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.dll
+C:\Users\Taieb\Desktop\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.pdb
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.dll.config
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\gloventApp.Data.pdb
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\EntityFramework.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\gloventApp.Domain.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Google.Protobuf.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\MySql.Data.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Owin.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\gloventApp.Domain.pdb
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\EntityFramework.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Google.Protobuf.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\MySql.Data.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.csprojResolveAssemblyReference.cache
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.dll
+C:\Users\Taieb\Documents\Visual Studio 2015\Projects\tibo\gloventApp.Data\obj\Debug\gloventApp.Data.pdb

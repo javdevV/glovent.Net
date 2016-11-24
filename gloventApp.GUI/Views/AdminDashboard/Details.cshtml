@@ -1,0 +1,78 @@
+﻿@model gloventApp.Data.Models.user
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <a href="#" class="btn btn-primary btn-block">
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        </a>
+        <a href="#" class="btn btn-primary btn-block">
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+        </a>
+        <a href="#" class="btn btn-primary btn-block">
+            <dt>
+                @Html.DisplayNameFor(model => model.DTYPE)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DTYPE)
+            </dd>
+            </a>
+        <a href="#" class="btn btn-primary btn-block">
+            <dt>
+                @Html.DisplayNameFor(model => model.AccountState)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AccountState)
+            </dd>
+            </a>
+
+        <a href="#" class="btn btn-primary btn-block">
+            <dt>
+                @Html.DisplayNameFor(model => model.age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.age)
+            </dd>
+            </a>
+        <a href="#" class="btn btn-primary btn-block">
+            <dt>
+                @Html.DisplayNameFor(model => model.fName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fName)
+            </dd>
+
+            </a>
+
+</dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditU", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

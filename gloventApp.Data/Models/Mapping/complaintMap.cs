@@ -12,12 +12,16 @@ namespace gloventApp.Data.Models.Mapping
 
             // Properties
             this.Property(t => t.id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             this.Property(t => t.Description)
                 .HasMaxLength(255);
 
+
             this.Property(t => t.Subject)
+                .HasMaxLength(255);
+
+            this.Property(t => t.importanceLvl)
                 .HasMaxLength(255);
 
             // Table & Column Mappings
@@ -25,7 +29,10 @@ namespace gloventApp.Data.Models.Mapping
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.Subject).HasColumnName("Subject");
+            this.Property(t => t.importanceLvl).HasColumnName("Importance");
+            this.Property(t => t.creationDate).HasColumnName("CreationDate");
             this.Property(t => t.MyUser_idUser).HasColumnName("MyUser_idUser");
+            this.Property(t => t.gere).HasColumnName("Managed");
 
             // Relationships
             this.HasOptional(t => t.user)

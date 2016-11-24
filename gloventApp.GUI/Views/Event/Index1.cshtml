@@ -1,0 +1,244 @@
+﻿@model DotNet.Highcharts.Container
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+    @*<div class="col-md-4">
+        <!-- USERS LIST -->
+        <div class="box box-danger">
+            <div class="box-header with-border">
+                <h3 class="box-title">All Events</h3>
+
+                <div class="box-tools pull-right">
+                    <span class="label label-danger"></span>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+
+
+                <ul class="users-list clearfix">
+                    @foreach (var item in Model)
+                    {
+
+                        <li>
+                            @{ string path = "~/Content/upload/" + @Html.DisplayFor(modelItem => item.theme);}
+                            <img src="~/Content/upload/evenement.png" style="width:50px;height:50px" alt="User Image">
+                            @{ string path1 = "" + @Html.DisplayFor(modelItem => item.nameEvent);}
+                            <a class="users-list-name" href="#">@Html.ActionLink(path1, "Details", new { id = item.idEvent }) </a>
+                            <span class="users-list-date">@Html.DisplayFor(modelItem => item.dateEvent)</span>
+                        </li>
+                                }
+                </ul>
+
+                <!-- /.users-list -->
+            </div>
+
+            <!-- /.box-body -->
+            <div class="box-footer text-center">
+                @Html.ActionLink("View All Events", "Index")
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!--/.box -->
+    </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-4">
+    <!-- USERS LIST -->
+    <div class="box box-danger">
+        <div class="box-header with-border">
+            <h3 class="box-title">Today Events</h3>
+            <div class="box-tools pull-right">
+                <span class="label label-danger"></span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+
+
+            <ul class="users-list clearfix">
+               @foreach (var person in ViewBag.l)
+            {
+                    <li>
+                        @{ string path = "~/Content/upload/" + @person.theme;}
+                       @{ string path1 = "" + @person.nameEvent;}
+                        <img src="~/Content/upload/evenement.png" style="width:50px;height:50px" alt="User Image">
+                        <a class="users-list-name" href="#">@Html.ActionLink(path1, "Details", new { id = person.idEvent }) </a>
+                        
+                    </li>
+                            }
+            </ul>
+
+            <!-- /.users-list -->
+        </div>
+
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+            @Html.ActionLink("View All Events", "Index")
+        </div>
+        <!-- /.box-footer -->
+    </div>
+    <!--/.box -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-4">
+    <!-- USERS LIST -->
+    <div class="box box-danger">
+        <div class="box-header with-border">
+            <h3 class="box-title">This Mounth Events</h3>
+
+            <div class="box-tools pull-right">
+                <span class="label label-danger"></span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+
+
+            <ul class="users-list clearfix">
+              @foreach (var person in ViewBag.m)
+            {
+
+                    <li>
+                        @{ string path = "~/Content/upload/" + @person.theme;}
+                        @{ string path1 = "" + @person.nameEvent;}
+                        <img src="~/Content/upload/evenement.png" style="width:50px;height:50px" alt="User Image">
+                        <a class="users-list-name" href="#">@Html.ActionLink(path1, "Details", new { id = person.idEvent }) </a>
+                       
+                    </li>
+                            }
+            </ul>
+
+            <!-- /.users-list -->
+        </div>
+
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+            @Html.ActionLink("View All Events", "Index")
+        </div>
+        <!-- /.box-footer -->
+    </div>
+    <!--/.box -->
+</div>
+
+
+
+
+   <div class="clearfix visible-sm-block"></div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="info-box bg-yellow">
+            <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Events this mounth</span>
+                <span class="info-box-number">@ViewBag.num</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                    @ViewBag.tx % Increase in 30 Days
+                </span>
+            </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+    </div><!-- /.col -->
+
+
+
+
+
+
+
+    <div class="col-lg-100 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>@ViewBag.tod</h3>
+
+                <p>Today Events</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- ./col -->
+
+
+
+
+
+
+<div class="col-lg-300 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-green">
+        <div class="inner">
+            <h3>@ViewBag.na<sup style="font-size: 20px"></sup></h3>
+
+            <p>Registred events</p>
+        </div>
+        <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+
+
+
+@(Model)

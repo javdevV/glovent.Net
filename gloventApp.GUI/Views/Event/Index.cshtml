@@ -1,4 +1,8 @@
-﻿@model IEnumerable<gloventApp.Data.Models.evente>
+﻿@model PagedList.IPagedList<gloventApp.Data.Models.evente>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
 
 @{
     ViewBag.Title = "Index";
@@ -6,141 +10,132 @@
 }
 
 
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.idEvent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.avaibility)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dateEvent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.localisation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nameEvent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.theme)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MyCategory_id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MyOrganization_id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MyRegistrationForm_id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nombreParticipant)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.type)
-        </th>
-        <th></th>
-    </tr>
+<div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.idEvent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.avaibility)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dateEvent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.localisation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nameEvent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.theme)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MyCategory_id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MyOrganization_id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MyRegistrationForm_id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombreParticipant)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.type)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
-</table>*@
+<div class="row-fluid">
+    <div class="row-fluid">
+        @using (Html.BeginForm())
+        {
+            <form class="form-inline span6">
+                <div>
+                   
+                    @Html.TextBox("searchString", "", new { @class = "form-control", style = "width:900px;display:inline-block;margin-left:10px" })
+                    <input type="submit" value="search" id="submit" class="btn btn-flat" style="display:inline-block;margin-right:10px;" />
+                </div>
+                <br />
+                @*<span>Sort By </span>
+                <span>@Html.ActionLink("Category", "SortByCategory", null, new { @class = "btn btn-warning", @style = "color:white" })</span>
+                <span>@Html.ActionLink("Price", "SortByPrice", null, new { @class = "btn btn-warning", @style = "color:white" })</span>
+                <span>@Html.ActionLink("Name", "SortByName", null, new { @class = "btn btn-warning", @style = "color:white" })</span>*@
 
 
-
-
-
-<div class="box">
-    <div class="box-header">
-        <h3 class="box-title">Events</h3>
+                        
+                  
+            </form>
+        }
     </div>
-    <!-- /.box-header -->
-    <div class="box-body">
-        <table id="example2" class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.idEvent)</th>
-                    <th>@Html.DisplayNameFor(model => model.nameEvent)</th>
-                    <th>@Html.DisplayNameFor(model => model.dateEvent)</th>
-                    <th>@Html.DisplayNameFor(model => model.localisation)</th>
-                    <th>@Html.DisplayNameFor(model => model.avaibility)</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-@foreach (var item in Model)
-{
-                <tr><td>@Html.DisplayFor(modelItem => item.idEvent)</td>
-                <td>@Html.DisplayFor(modelItem => item.nameEvent)</td>
-                <td>@Html.DisplayFor(modelItem => item.dateEvent)</td>
-                <td>@Html.DisplayFor(modelItem => item.localisation)</td>
-                <td>@Html.DisplayFor(modelItem => item.avaibility)</td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new {  id=item.idEvent }) |
-                    @Html.ActionLink("Details", "Details", new {  id=item.idEvent }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.idEvent })
-                </td>
-
-                </tr>
-                
-}
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.idEvent)</th>
-                    <th>@Html.DisplayNameFor(model => model.nameEvent)</th>
-                    <th>@Html.DisplayNameFor(model => model.dateEvent)</th>
-                    <th>@Html.DisplayNameFor(model => model.localisation)</th>
-                    <th>@Html.DisplayNameFor(model => model.avaibility)</th>
-                    <th>Action</th>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    <!-- /.box-body -->
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@foreach (var item in Model)
+{
+<div class="col-md-4">
+    <!-- Widget: user widget style 1 -->
+    <div class="box box-widget widget-user">
+        <!-- Add the bg color to the header using any of the bg-* classes -->
+        @{ string path = "~/Content/upload/" + @Html.DisplayFor(modelItem => item.theme);}
+       
+        <div class="widget-user-header bg-black" style="background: url('@Url.Content(path)') center center;">
+            <h3 class="widget-user-username">@Html.DisplayFor(modelItem => item.nameEvent)</h3>
+            <h5 class="widget-user-desc"></h5>
+        </div>
+        <div class="widget-user-image">
+            <img class="img-circle" src="~/Content/upload/evenement.png" alt="User Avatar">
+        </div>
+        <div class="box-footer">
+            <div class="row">
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">@Html.DisplayFor(modelItem => item.dateEvent)</h5>
+                        <span class="description-text">@Html.ActionLink("Edit", "Edit", new { id = item.idEvent })</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">@Html.DisplayFor(modelItem => item.avaibility)</h5>
+                    
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                    <div class="description-block">
+                        <h5 class="description-header">@Html.DisplayFor(modelItem => item.localisation)</h5>
+                        <span class="description-text">
+                        @Html.ActionLink("Details", "Details", new { id = item.idEvent })</span>
+</div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!-- /.widget-user -->
+</div>
+
+
+
+}
+</div>
+
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+
+
+    <i class="fa fa-save">@Html.ActionLink("SavePDF", "Print", "Event")</i>
+    

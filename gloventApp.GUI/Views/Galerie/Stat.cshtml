@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Stat";
+}
+
+<h2>Stat</h2>
+
+<script src="~/Content/Chart.bundle.min.js"></script>
+<script src="~/Content/utils.js"></script>
+<style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+</style>
+
+
+<div style="width: 75%;">
+    <canvas id="canvas"></canvas>
+    <progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+</div>
+<br>
+<br>
+<button id="randomizeData">Randomize Data</button>
+
+
+<script>
+    var Galerie = [];
+    var nbrimage = [];
+    var nbrvideo = [];
+    @foreach(KeyValuePair<string,int> entry in ViewBag.res)
+    {
+        @:Galerie.push("@entry.Key");
+        @:nbrimage.push("@entry.Value");
+            }
+      @foreach(KeyValuePair<string,int> entry1 in ViewBag.res1)
+    {
+    
+        @:nbrvideo.push("@entry1.Value");
+        }
+
+
+    
+    var MONTHS = Galerie;
+        var progress = document.getElementById('animationProgress');
+        var config = {
+            type: 'line',
+            data: {
+                labels: Galerie,
+                datasets: [{
+                    fill: false,
+                    borderColor: window.chartColors.red,
+                    backgroundColor: window.chartColors.red,
+                    data: nbrimage
+                }, {
+                    label: "",
+                    fill: false,
+                    borderColor: window.chartColors.blue,
+                    backgroundColor: window.chartColors.blue,
+                    data: nbrvideo
+                }]
+            },
+            options: {
+                title:{
+                    display:true,
+                    text: "le nombre des video et image par galerie "
+                },
+                animation: {
+                    duration: 2000,
+                    onProgress: function(animation) {
+                        progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+                    },
+                    onComplete: function(animation) {
+                        window.setTimeout(function() {
+                            progress.value = 0;
+                        }, 2000);
+                    }
+                }
+            }
+        };
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myLine = new Chart(ctx, config);
+        };
+        document.getElementById('randomizeData').addEventListener('click', function() {
+            config.data.datasets.forEach(function(dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
+            });
+            window.myLine.update();
+        });
+</script>
+

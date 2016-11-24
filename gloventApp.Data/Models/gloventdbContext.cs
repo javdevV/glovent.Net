@@ -1,21 +1,34 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using gloventApp.Data.Models.Mapping;
-
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace gloventApp.Data.Models
 {
-    public partial class gloventdbContext : DbContext
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
+    public partial class gloventdbContext : IdentityDbContext<user, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>
     {
+        private object HttpContext;
+
         static gloventdbContext()
         {
-            Database.SetInitializer<gloventdbContext>(null);
+            new gloventdbContext();
         }
 
         public gloventdbContext()
             : base("Name=gloventdbContext")
         {
         }
+
+        public static gloventdbContext Create()
+        {
+            return new gloventdbContext();
+        }
+
+
+
+
 
         public DbSet<answer> answer { get; set; }
         
@@ -37,7 +50,7 @@ namespace gloventApp.Data.Models
         public DbSet<task> task { get; set; }
         public DbSet<thread> thread { get; set; }
         public DbSet<ticket> ticket { get; set; }
-        public DbSet<user> users { get; set; }
+       // public DbSet<user> users { get; set; }
         public DbSet<video> video { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -63,6 +76,9 @@ namespace gloventApp.Data.Models
             modelBuilder.Configurations.Add(new ticketMap());
             modelBuilder.Configurations.Add(new userMap());
             modelBuilder.Configurations.Add(new videoMap());
+            modelBuilder.Entity<user>().Property(r => r.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<CustomUserClaim>().Property(r => r.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<CustomUserRole>().Property(r => r.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }
 }

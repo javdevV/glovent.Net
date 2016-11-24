@@ -1,0 +1,80 @@
+﻿@model PagedList.IPagedList<gloventApp.Data.Models.category>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des categories validées</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+
+
+
+
+
+
+@foreach (var item in Model)
+{
+
+<div class="col-md-4">
+    <!-- Widget: user widget style 1 -->
+    <div class="box box-widget widget-user">
+        <!-- Add the bg color to the header using any of the bg-* classes -->
+        <div class="widget-user-header bg-aqua-active">
+            <h5 class="widget-user-desc">Category number @Html.DisplayFor(modelItem => item.id)</h5>
+            <h3 class="widget-user-username">@Html.DisplayFor(modelItem => item.Libelle)</h3>
+            
+        </div>
+        <div class="widget-user-image">
+            @{ string path = "~/Content/upload/" + @Html.DisplayFor(modelItem =>item.image);}
+            <img class="img-circle" src="@Url.Content(path)" style="height: 90px; alt="User Avatar">
+            
+        </div>
+        <div class="box-footer">
+            <div class="row">
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">@Html.ActionLink("Edit", "Edit", new { id = item.id }) </h5>
+                        
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">@Html.ActionLink("Details", "Details", new { id = item.id })</h5>
+                        
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                    <div class="description-block">
+                        <h5 class="description-header">@Html.ActionLink("Delete", "Delete", new { id = item.id })</h5>
+                     
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!-- /.widget-user -->
+</div>
+
+
+}
+
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+

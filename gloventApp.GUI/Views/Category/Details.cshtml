@@ -1,0 +1,39 @@
+﻿@model gloventApp.Data.Models.category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+
+ 
+
+<div class="col-md-3">
+
+    <!-- Profile Image -->
+    <div class="box box-primary"style="height:290px;">
+        <div class="box-body box-profile">
+            <br />
+            @{ string path = "~/Content/upload/" + @Html.DisplayFor(model => model.image);}
+        
+                <img class="profile-user-img img-responsive img-circle" src="@Url.Content(path)" style="height: 90px; alt="User profile picture">
+            <br />
+            <h3 class="profile-username text-center">Category:<p style="color:blue">@Html.DisplayFor(model => model.Libelle)</p></h3>
+            
+            <h3 class="profile-username text-center"><span>Nombre d'évenements:</span><p style="color:blue">@ViewBag.ne</p></h3>
+
+
+
+            </div>
+</div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+
+
+</div>
+
+
+
+

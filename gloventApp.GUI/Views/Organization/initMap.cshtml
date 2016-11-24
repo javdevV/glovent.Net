@@ -1,0 +1,43 @@
+﻿@using Jmelosegui.Mvc.GoogleMap
+
+
+@using (Html.BeginForm())
+{
+    <h3>Organizatons making events in </h3>
+@Html.DropDownList("pp", (IEnumerable<SelectListItem> )ViewBag.pp, new { htmlAttributes = new { @class = "form-control" } })
+    <input type="submit" name="search" value="search" class="btn btn-default" />
+
+}
+ 
+@(Html.GoogleMap()
+                .Name("map")
+                .Height(300)
+                .FitToMarkersBounds(true)
+                        .MarkersGeocoding(true)
+                        .Markers(m =>
+                        {
+                            foreach (var item in ViewBag.map)
+                            {
+
+                                m.Add().Window(w => w.Add().MaxWidth(500)
+                                                    .Content(
+                                                    Model => item.name
+                                                    + item.type
+                                                    + item.Location
+                                                    )
+                                                )
+                                                .Address(item.Location);
+                            }
+                        })
+                        .ApiKey("AIzaSyCtmb5sclkiJ3F0uRvv11mESYn1iJ2GvyI")
+)
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+
+@section scripts
+{
+    @(Html.GoogleMap().ScriptRegistrar())
+}
